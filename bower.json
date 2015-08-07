@@ -1,0 +1,15 @@
+{
+  "name": "BackboneSession",
+  "version": "1.0.0",
+  "authors": [
+    "Nicolas Kern <nicolas.kern@acseo-conseil.fr>"
+  ],
+  "description": "Uses JWT to authenticate a user into a Backbone application - written in CoffeeScript",
+  "main": "Session/Session.controller.coffee",
+  "keywords": [
+    "backbone",
+    "jwt",
+    "coffeescript"
+  ],
+  "license": "MIT"
+}
