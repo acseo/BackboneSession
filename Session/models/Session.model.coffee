@@ -4,7 +4,7 @@
 #   'logged' to GET an user thanks to HTTP header property "Authorization" with value "Bearer"
 #   'login_check' to POST an _username and _password to check credentials, authenticate, and get token
 #
-app.module 'OfficeLegal.Session', (Session, App, Bb, Mn, $, _) ->
+app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
 
   Session.Model = Bb.Model.extend
     url: 'logged'

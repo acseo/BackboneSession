@@ -1,6 +1,6 @@
 # Login form of the header
 #
-app.module 'OfficeLegal.Session', (Session, App, Bb, Mn, $, _) ->
+app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
 
   Session.LoginView = Mn.ItemView.extend
     template: '#tpl-session-login'

@@ -1,6 +1,6 @@
 # Logged area of the header
 #
-app.module 'OfficeLegal.Session', (Session, App, Bb, Mn, $, _) ->
+app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
 
   Session.LoggedView = Mn.ItemView.extend
     template: '#tpl-session-logged'

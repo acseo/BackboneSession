@@ -1,6 +1,6 @@
 # Session router
 #
-app.module 'OfficeLegal.Session', (Session, App, Bb, Mn, $, _) ->
+app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
 
   Session.SessionRouter = Mn.AppRouter.extend(appRoutes:
     'login': 'login'

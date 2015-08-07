@@ -1,6 +1,6 @@
 # Session controller
 #
-app.module 'OfficeLegal.Session', (Session, App, Bb, Mn, $, _) ->
+app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
 
   Session.controller =
     login: ->
