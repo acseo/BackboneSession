@@ -5,7 +5,7 @@
     "Nicolas Kern <nicolas.kern@acseo-conseil.fr>"
   ],
   "description": "Uses JWT to authenticate a user into a Backbone application - written in CoffeeScript",
-  "main": "Session/Session.controller.coffee",
+  "main": "Session.controller.coffee",
   "keywords": [
     "backbone",
     "jwt",
