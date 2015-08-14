@@ -5,6 +5,8 @@ app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
   Session.controller =
     login: ->
       App.page.show new Session.LoginView {model: window.session}
+    registration: ->
+      App.page.show new Session.RegistrationView {model: new Session.RegistrationModel}
     logout: ->
       window.session.destroy()
       window.session = Session.session = new Session.Model()
