@@ -12,6 +12,7 @@ app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
       window.session = Session.session = new Session.Model()
       App.headerUser.show new Session.LoginView {model: window.session}
       app.navigate '/', { trigger:true, replace: true }
+      window.location.reload(false)
     forgotPassword: ->
       App.page.show new Session.SessionForgotPasswordView
     updatePassword: ->
