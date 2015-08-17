@@ -23,6 +23,7 @@ app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
       # Saves session information to cookie
       @bind 'sync', (model, datas, req)->
         if model.get('token')
+          App.commands.trigger 'session:started', model
           $.cookies.set('token', model.get('token'))
 
     save: (attrs, options) ->
