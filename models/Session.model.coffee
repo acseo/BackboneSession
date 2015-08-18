@@ -35,6 +35,10 @@ app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
       @trigger('destroy', @)
       $.cookies.del('token')
 
+    isAuthenticated: ->
+      return @get('token')
+
+
   _.extend Bb.Validation.Async.validators, {
     credentialsMatch: (value, attr, customValue, model, computed, deferred) ->
       creds = {
