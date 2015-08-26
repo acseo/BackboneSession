@@ -8,7 +8,7 @@ app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
     registration: ->
       registrationView = new Session.RegistrationView
       App.page.show registrationView
-      registrationView.form.show new Session.RegistrationFormView{model: new Session.RegistrationModel}
+      registrationView.form.show new Session.RegistrationFormView(model: new Session.RegistrationModel)
     logout: ->
       window.session.destroy()
       window.session = Session.session = new Session.Model()
