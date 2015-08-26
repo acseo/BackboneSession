@@ -9,4 +9,5 @@ app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
     'mot-de-passe-oublie' : 'forgotPassword'
     'modifier-mot-de-passe/:token' : 'updatePassword'
     'mon-profil' : 'myProfile'
+    'check-email' : 'checkEmail'
   )
