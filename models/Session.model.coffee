@@ -27,6 +27,8 @@ app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
           $.cookies.set('token', model.get('token'))
 
     save: (attrs, options) ->
+      if not options
+        options = {}
       options.url = "login_check"
       Bb.Model.prototype.save.call(this, attrs, options)
       # call api to get user informations and store them in session
