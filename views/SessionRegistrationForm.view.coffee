@@ -6,6 +6,7 @@ app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
     model: Session.RegistrationModel
     events:
         'submit': 'submit'
+        'change form textarea, input, select': "onFormInputChange"
     initialize: ->
         @form = new Backbone.Form(model: @model, submitButton: 'Envoyer')
 
@@ -14,6 +15,7 @@ app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
     render: ->
         @form.render()
         @$el.html @form.render().el
+
     submit: ->
         view = @
         if @form.commit({ validate: true })
@@ -25,3 +27,6 @@ app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
                     view.model.unset 'id' #thanks to this line, we won't make a PUT if we submit this form again
                 .fail (data) ->
                     App.module("ACSEO.Toolkit").Alert "Une erreur a eu lieu lors de la soumission du formulaire", "danger"
+
+    onFormInputChange: (e) ->
+      @model.set $(e.currentTarget).attr('name'), $(e.currentTarget).val()
