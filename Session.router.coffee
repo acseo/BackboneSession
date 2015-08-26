@@ -7,6 +7,6 @@ app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
     'registration': 'registration'
     'logout': 'logout'
     'mot-de-passe-oublie' : 'forgotPassword'
-    'modifier-mot-de-passe' : 'updatePassword'
+    'modifier-mot-de-passe/:token' : 'updatePassword'
     'mon-profil' : 'myProfile'
   )
