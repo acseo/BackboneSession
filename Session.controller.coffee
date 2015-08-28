@@ -27,6 +27,6 @@ app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
   @onStart = ->
     window.router = new Session.SessionRouter(controller: Session.controller)
     window.session = Session.session = new Session.Model()
-    App.commands.trigger 'session:started', window.session
+    # App.commands.trigger 'session:started', window.session
 
     return
