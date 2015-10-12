@@ -32,7 +32,9 @@ app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
         session.unset '_username'
         session.unset '_password'
         App.headerUser.show new Session.LoggedView {model: window.session}
-        # app.navigate '/', { trigger:true, replace: true }
+        app.navigate '/', { trigger:true, replace: true }
+        window.location.reload(false)
+
       , ->
         session.unset '_username'
         session.unset '_password'
