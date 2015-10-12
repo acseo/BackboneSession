@@ -32,14 +32,7 @@ app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
         session.unset '_username'
         session.unset '_password'
         App.headerUser.show new Session.LoggedView {model: window.session}
-        #do call to get firstname and lastname to set session model and display window
-        $.ajax({
-          type: "GET"
-          url: "logged"
-          success: (data) ->
-            window.session.set data
-        })
-
+        # app.navigate '/', { trigger:true, replace: true }
       , ->
         session.unset '_username'
         session.unset '_password'
