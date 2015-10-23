@@ -19,6 +19,8 @@ app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
       App.page.show new Session.SessionForgotPasswordView
     updatePassword: ->
       App.page.show new Session.SessionUpdatePasswordView
+    changePassword: ->
+      App.page.show new Session.SessionUpdatePasswordView
     checkEmail: ->
       App.page.show new Session.SessionCheckEmailView
     myProfile: ->
