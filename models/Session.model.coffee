@@ -51,7 +51,13 @@ app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
       model.save creds,
         validate: false,
         success: deferred.resolve
-        error: ->
-          deferred.reject('Identifiants incorrects')
+        error: (data, error) ->
+          if error.status = 500
+            if error.responseText.match(/login blocked.*/)
+              deferred.reject('Compte bloqué temporairement')
+            else
+              deferred.reject('Identifiants incorrects')
+          else
+            deferred.reject('Identifiants incorrects')
       return
   }
