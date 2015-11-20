@@ -52,9 +52,9 @@ app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
         validate: false,
         success: deferred.resolve
         error: (data, error) ->
-          if error.status = 401
+          if error.status == 401
             deferred.reject('Identifiants incorrects')
-          else if error.status = 403
+          else if error.status == 403
             deferred.reject('Compte bloqué temporairement')
           else
             deferred.reject('Problème de connenxion')
