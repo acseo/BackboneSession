@@ -57,6 +57,6 @@ app.module 'ACSEO.Session', (Session, App, Bb, Mn, $, _) ->
           else if error.status == 403
             deferred.reject('Compte bloqué temporairement')
           else
-            deferred.reject('Problème de connenxion')
+            deferred.reject('Problème de connexion')
       return
   }
